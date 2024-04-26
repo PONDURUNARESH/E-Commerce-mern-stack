@@ -1,9 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+/* CSS code here */
+/* Existing CSS code */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* font-family: 'Poppins', sans-serif; */
@@ -11,96 +13,125 @@
 
 /* //navbar css */
 .navbar {
-  font-family: "Poppins", sans-serif;
-  font-size: 17px;
-  line-height: 26px;
-  text-transform: uppercase;
-  box-shadow: 0 8px 6px -6px gray;
-  --webkit-box-shadow: 0 8px 6px -6px gray;
-  border-bottom: solid gray !important;
+    font-family: "Poppins", sans-serif;
+    font-size: 17px;
+    line-height: 26px;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px gray;
+    --webkit-box-shadow: 0 8px 6px -6px gray;
+    border-bottom: solid gray !important;
 }
 
-.nav-link {
-  font-weight: 300 !important;
+/* ... other existing styles ... */
+
+/* New CSS code for payment gateway */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px); /* Adjust the height based on your footer height */
+    padding: 25px;
+    background: #d6eef1;
 }
 
-.active {
-  border-bottom: 2px solid black;
+.container form {
+    width: 700px;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.2);
 }
 
-.navbar-brand {
-  font-weight: 700;
-  font-family: "roboto", sans-serif;
-  letter-spacing: 3px;
-}
-/* =============================
-==========footer============= */
-
-.footer {
-  color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-.footer a {
-  text-decoration: none;
-  color: white;
-  padding: 10px;
+.container form .row .col {
+    flex: 1 1 250px;
 }
 
-.footer a:hover {
-  color: #ffefba;
-  border-bottom: 1px solid #ffefba;
-}
-/* =================================
-======== page not found css ======= */
-.pnf {
-  display: flex;
-  min-height: 65vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.col .title {
+    font-size: 20px;
+    color: rgb(237, 55, 23);
+    padding-bottom: 5px;
 }
 
-.pnf-title {
-  font-size: 100px;
-  font-weight: 700;
+.col .inputBox {
+    margin: 15px 0;
 }
 
-.pnf-heading {
-  font-weight: normal;
+.col .inputBox label {
+    margin-bottom: 10px;
+    display: block;
 }
 
-.pnf-btn {
-  color: black;
-  border: 1px solid black;
-  text-decoration: none;
-  padding: 10px;
-  margin-top: 10px;
-}
-.pnf-btn:hover {
-  background-color: black;
-  color: white;
-}
-/* ========================================= */
-/* =========contact us ========= */
-.contactus {
-  margin: 0;
-  padding: 0;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.col .inputBox input,
+.col .inputBox select {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
 }
 
-/* ==================== */
-.product-link {
-  text-decoration: none !important;
-  color: black !important;
+.col .inputBox input:focus,
+.col .inputBox select:focus {
+    border: 1px solid #000;
+}
+
+.col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.col .flex .inputBox {
+    flex: 1 1;
+    margin-top: 5px;
+}
+
+.col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit_btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: rgb(1, 143, 34);
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    letter-spacing: 1px;
+}
+
+.container form .submit_btn:hover {
+    background: #3d17fb;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+    display: none;
+}
+
+/* Additional CSS for order confirmation message */
+.order-confirmation {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.order-confirmation.show {
+    display: flex;
+}
+
+.order-confirmation #orderMessage {
+    margin-right: 10px;
+}
+
+.order-confirmation .tick-mark {
+    font-size: 20px;
+    color: green;
 }
